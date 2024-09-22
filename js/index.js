@@ -78,6 +78,7 @@ function donateTabButton(){
     history_tab.classList.add('text-gray-600');
     donate_tab.classList.add('bg-primary','text-black');
     donate_tab.classList.remove('border-2','text-gray-600');
+    cardContainer.classList.add('hidden');
 }
 
 
