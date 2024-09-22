@@ -9,3 +9,8 @@ function inputValueById(id){
     return inputValuesNum;
 }
 
+function innerValueById(id){
+    allInnerValues = document.getElementById(id).innerText;
+    let innerValueNum = Number(allInnerValues);
+    return innerValueNum;
+}
