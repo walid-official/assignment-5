@@ -5,7 +5,7 @@ const donationAmount3 = document.getElementById('donation3');
 const myModal =  document.getElementById('my_modal_1');
 const cardContainer = document.getElementById('card-container');
 const historyContainer = document.getElementById('history-container');
-
+const historyContent = document.getElementById('history-content');
 
 
 let first_card_btn = buttonClickedById('first-card-btn');
@@ -103,8 +103,8 @@ function donateTabButton(){
     history_tab.classList.add('text-gray-600');
     donate_tab.classList.add('bg-primary','text-black');
     donate_tab.classList.remove('border-2','text-gray-600');
-    historyContainer.classList.add('hidden')
-    cardContainer.classList.remove('hidden')
+    historyContainer.classList.add('hidden');
+    cardContainer.classList.remove('hidden');
 }
 
 
@@ -117,6 +117,7 @@ function historyTabButton(){
     donate_tab.classList.add('border-2','text-gray-600');
     cardContainer.classList.add('hidden');
     historyContainer.classList.remove('hidden')
+    historyContent.classList.remove('hidden');
 }
 
 
