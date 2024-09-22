@@ -26,18 +26,19 @@ blog_btn.addEventListener('click', blogNewTabOpen);
 
 function card1ButtonAction(){
     let firstInput = inputValueById('first-input');
-    if(!isNaN(firstInput) && firstInput > 0){
+    document.getElementById('first-input').value = "";
+    if(!isNaN(firstInput) && firstInput > 0 && reservedAmount.innerText >= firstInput){
        myModal.showModal();
-    }
-    else{
-        alert('Please Give Digits and Valid Number');
+    }else if(reservedAmount.innerText < firsInput){
+        alert("you Don't have enough money");
+        return;
+    }else{
+        alert('Invalid Donation Amount');
         return;
     }
     let firstInner = innerValueById('donation1');
     donationAmount1.innerText = firstInner + firstInput;
     reservedAmount.innerText = reservedAmount.innerText - firstInput;
-    let valueInput = document.getElementById('first-input');
-    valueInput.value = ""
     let history1 = `
          <div class="border py-5 px-3 mt-3">
           <h2 class="font-bold">${firstInput} Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
@@ -51,17 +52,20 @@ function card1ButtonAction(){
 
 function card2ButtonAction(){
     let secondInput = inputValueById('second-input');
-    if(!isNaN(secondInput) && secondInput > 0){
+    document.getElementById('second-input').value = "";
+    if(!isNaN(secondInput) && secondInput > 0 && reservedAmount.innerText >= secondInput){
         myModal.showModal();
+     }else if(reservedAmount.innerText < secondInput){
+        alert("you Don't have enough money");
+        return
      }
      else{
-         alert('Please Give Digits and Valid Number');
+         alert('Invalid Donation Amount');
          return;
      }
      let secondInner = innerValueById('donation2');
     donationAmount2.innerText = secondInner + secondInput;
     reservedAmount.innerText = reservedAmount.innerText - secondInput;
-    document.getElementById('second-input').value = "";
     let history2 = `
         <div class="border py-5 px-3 mt-3">
         <h2 class="font-bold">${secondInput} Taka is Donated for Flood Relief in Feni,Bangladesh</h2>
@@ -75,11 +79,14 @@ function card2ButtonAction(){
 
 function card3ButtonAction(){
     let thirdInput = inputValueById('third-input');
-    if(!isNaN(thirdInput) && thirdInput > 0){
+    if(!isNaN(thirdInput) && thirdInput > 0 && reservedAmount.innerText >= thirdInput){
         myModal.showModal();
-     }
+    }else if(reservedAmount.innerText < thirdInput){
+        alert("you Don't have enough money");
+        return;
+    }
      else{
-         alert('Please Give Digits and Valid Number');
+         alert('Invalid Donation Amount');
          return;
      }
     let thirdInner = innerValueById('donation3');
