@@ -3,12 +3,16 @@ const donationAmount1 = document.getElementById('donation1');
 const donationAmount2 = document.getElementById('donation2');
 const donationAmount3 = document.getElementById('donation3');
 const myModal =  document.getElementById('my_modal_1');
+const cardContainer = document.getElementById('card-container');
+
+
 
 let first_card_btn = buttonClickedById('first-card-btn');
 let second_card_btn = buttonClickedById('second-card-btn');
 let third_card_btn = buttonClickedById('third-card-btn');
 let donate_tab = buttonClickedById('donate-tab');
 let history_tab = buttonClickedById('history-tab');
+let blog_btn = buttonClickedById('blog-btn');
 
 
 first_card_btn.addEventListener('click', card1ButtonAction);
@@ -16,6 +20,7 @@ second_card_btn.addEventListener('click', card2ButtonAction);
 third_card_btn.addEventListener('click', card3ButtonAction);
 donate_tab.addEventListener('click', donateTabButton);
 history_tab.addEventListener('click', historyTabButton);
+blog_btn.addEventListener('click', blogNewTabOpen);
 
 
 function card1ButtonAction(){
@@ -83,4 +88,10 @@ function historyTabButton(){
     history_tab.classList.remove('text-gray-600');
     donate_tab.classList.remove('bg-primary');
     donate_tab.classList.add('border-2','text-gray-600');
+}
+
+
+
+function blogNewTabOpen(){
+    window.location.href = './blog.html';
 }
