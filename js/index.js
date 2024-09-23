@@ -36,7 +36,7 @@ function card1ButtonAction(){
     document.getElementById('first-input').value = "";
     if(!isNaN(firstInput) && firstInput > 0 && reservedAmount.innerText >= firstInput){
        myModal.showModal();
-    }else if(reservedAmount.innerText < firsInput){
+    }else if(reservedAmount.innerText < firstInput){
         alert("you Don't have enough money");
         return;
     }else{
@@ -47,7 +47,6 @@ function card1ButtonAction(){
     let firstInner = innerValueById('donation1');
     donationAmount1.innerText = firstInner + firstInput;
     reservedAmount.innerText = reservedAmount.innerText - firstInput;
-
     //step-3 : History Of Donation
     let history1 = `
          <div class="border py-5 px-3 mt-3">
@@ -56,8 +55,6 @@ function card1ButtonAction(){
         </div>
     `
     historyContainer.innerHTML += history1;
-    // footerBg.classList.add('mt-[8%]')
-    // footerBg.classList.remove('mt-80')
 }
 
 
@@ -75,7 +72,7 @@ function card2ButtonAction(){
         myModal.showModal();
      }else if(reservedAmount.innerText < secondInput){
         alert("you Don't have enough money");
-        return
+        return;
      }
      else{
          alert('Invalid Donation Amount');
