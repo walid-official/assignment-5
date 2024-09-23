@@ -56,7 +56,7 @@ function card1ButtonAction(){
         </div>
     `
     historyContainer.innerHTML += history1;
-    historyContent.classList.remove('mb-[30%]');
+    historyContent.classList.add('hidden');
 }
 
 
@@ -94,7 +94,7 @@ function card2ButtonAction(){
         </div>
     `
     historyContainer.innerHTML += history2;
-    historyContent.classList.remove('mb-[30%]');
+    historyContent.classList.add('hidden');
 }
 
 
@@ -131,7 +131,7 @@ function card3ButtonAction(){
         </div>
     `
     historyContainer.innerHTML += history3;
-    historyContent.classList.remove('mb-[30%]');
+    historyContent.classList.add('hidden');
 }
 
 
