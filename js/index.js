@@ -30,6 +30,8 @@ blog_btn.addEventListener('click', blogNewTabOpen);
 
 //first-function 1
 function card1ButtonAction(){
+
+    //step-1 : Input Validation
     let firstInput = inputValueById('first-input');
     document.getElementById('first-input').value = "";
     if(!isNaN(firstInput) && firstInput > 0 && reservedAmount.innerText >= firstInput){
@@ -41,9 +43,12 @@ function card1ButtonAction(){
         alert('Invalid Donation Amount');
         return;
     }
+     //step-2 : Donation Amount Calculation
     let firstInner = innerValueById('donation1');
     donationAmount1.innerText = firstInner + firstInput;
     reservedAmount.innerText = reservedAmount.innerText - firstInput;
+
+    //step-3 : History Of Donation
     let history1 = `
          <div class="border py-5 px-3 mt-3">
           <h2 class="font-bold">${firstInput} Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
@@ -51,6 +56,7 @@ function card1ButtonAction(){
         </div>
     `
     historyContainer.innerHTML += history1;
+    historyContent.classList.remove('mb-[30%]');
 }
 
 
@@ -60,6 +66,8 @@ function card1ButtonAction(){
 
 //second-function 2
 function card2ButtonAction(){
+
+    //step-1 : Input Validation
     let secondInput = inputValueById('second-input');
     document.getElementById('second-input').value = "";
     if(!isNaN(secondInput) && secondInput > 0 && reservedAmount.innerText >= secondInput){
@@ -72,9 +80,13 @@ function card2ButtonAction(){
          alert('Invalid Donation Amount');
          return;
      }
-     let secondInner = innerValueById('donation2');
+
+    //step-2 : Donation Amount Calculation
+    let secondInner = innerValueById('donation2');
     donationAmount2.innerText = secondInner + secondInput;
     reservedAmount.innerText = reservedAmount.innerText - secondInput;
+
+     //step-3 : History Of Donation
     let history2 = `
         <div class="border py-5 px-3 mt-3">
         <h2 class="font-bold">${secondInput} Taka is Donated for Flood Relief in Feni,Bangladesh</h2>
@@ -82,6 +94,7 @@ function card2ButtonAction(){
         </div>
     `
     historyContainer.innerHTML += history2;
+    historyContent.classList.remove('mb-[30%]');
 }
 
 
@@ -90,6 +103,8 @@ function card2ButtonAction(){
 
 // Third Function
 function card3ButtonAction(){
+
+    //step-1 : Input Validation
     let thirdInput = inputValueById('third-input');
     if(!isNaN(thirdInput) && thirdInput > 0 && reservedAmount.innerText >= thirdInput){
         myModal.showModal();
@@ -100,11 +115,15 @@ function card3ButtonAction(){
      else{
          alert('Invalid Donation Amount');
          return;
-     }
+    }
+
+    //step-2 : Donation Amount Calculation
     let thirdInner = innerValueById('donation3');
     donationAmount3.innerText = thirdInner + thirdInput;
     reservedAmount.innerText = reservedAmount.innerText - thirdInput;
     document.getElementById('third-input').value = "";
+
+    //step-3 : History Of Donation
     let history3 = `
         <div class="border py-5 px-3 mt-3">
         <h2 class="font-bold">${thirdInput}  Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</h2>
@@ -112,6 +131,7 @@ function card3ButtonAction(){
         </div>
     `
     historyContainer.innerHTML += history3;
+    historyContent.classList.remove('mb-[30%]');
 }
 
 
