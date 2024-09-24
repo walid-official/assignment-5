@@ -34,17 +34,12 @@
   </head>
 
   <body>
-    <header class="max-w-full">
-      <div class="bg-secondary">
+    <header class="max-w-full sticky top-0 backdrop-blur z-10 opacity-95">
+      <div class="bg-secondary ">
         <div class="w-11/12 mx-auto py-6">
           <div class="sm:flex justify-between text-center">
             <div class="">
-              <button
-                id="blog-btn"
-                class="btn hover:bg-primary bg-primary px-8 text-black"
-              >
-                <a href="index.html">Home</a>
-              </button>
+              </button><a  id="blog-btn" href="index.html" class="btn hover:bg-primary bg-primary px-8 text-black">Home</a>
             </div>
             <div class="">
               <a class="btn btn-ghost text-xl"
@@ -67,11 +62,11 @@
 
     <main class="w-11/12 mx-auto space-y-2">
       <div class="my-6 flex">
-        <h1 class="text-3xl font-bold mt-5">Important FAQ</h1>
+        <h1 class="text-3xl font-bold mt-5 text-slate-700">Important FAQ</h1>
         <img src="assets/faq-removebg-preview.png" class="w-20" alt="">
       </div>
 
-      <div class="collapse collapse-arrow border py-4">
+      <div class="collapse collapse-arrow border py-4 bg-slate-600 text-white">
         <input type="radio" name="my-accordion-2" checked="checked" />
         <div class="collapse-title text-xl font-medium">
           What is the Document Object Model (Dom)?
@@ -87,7 +82,7 @@
         </div>
       </div>
 
-      <div class="collapse collapse-arrow border py-4">
+      <div class="collapse collapse-arrow border py-4 bg-slate-600 text-white">
         <input type="radio" name="my-accordion-2" />
         <div class="collapse-title text-xl font-medium">
           How do you select an element from the DOM?
@@ -104,7 +99,7 @@
         </div>
       </div>
 
-      <div class="collapse collapse-arrow border py-4">
+      <div class="collapse collapse-arrow border py-4 bg-slate-600 text-white">
         <input type="radio" name="my-accordion-2" />
         <div class="collapse-title text-xl font-medium">
           what is the event delegation in the context of the dom and why it
@@ -126,7 +121,7 @@
         </div>
       </div>
 
-      <div class="collapse collapse-arrow border py-4">
+      <div class="collapse collapse-arrow border py-4 bg-slate-600 text-white">
         <input type="radio" name="my-accordion-2" />
         <div class="collapse-title text-xl font-medium">
           how do you manipulate an element's attributes and styles using the
