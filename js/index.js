@@ -30,12 +30,11 @@ blog_btn.addEventListener('click', blogNewTabOpen);
 
 //first-function 1
 function card1ButtonAction(){
-
+   
     //step-1 : Input Validation
     let firstInput = inputValueById('first-input');
-    document.getElementById('first-input').value = "";
     if(!isNaN(firstInput) && firstInput > 0 && reservedAmount.innerText >= firstInput){
-       myModal.showModal();
+        myModal.showModal();
     }else if(reservedAmount.innerText < firstInput){
         alert("you Don't have enough money");
         return;
@@ -55,6 +54,7 @@ function card1ButtonAction(){
         </div>
     `
     historyContainer.innerHTML += history1;
+    document.getElementById('first-input').value = "";
 }
 
 
@@ -70,14 +70,14 @@ function card2ButtonAction(){
     document.getElementById('second-input').value = "";
     if(!isNaN(secondInput) && secondInput > 0 && reservedAmount.innerText >= secondInput){
         myModal.showModal();
-     }else if(reservedAmount.innerText < secondInput){
+    }else if(reservedAmount.innerText < secondInput){
         alert("you Don't have enough money");
         return;
-     }
+    }
      else{
          alert('Invalid Donation Amount');
          return;
-     }
+    }
 
     //step-2 : Donation Amount Calculation
     let secondInner = innerValueById('donation2');
